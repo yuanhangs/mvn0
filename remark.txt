@@ -1,0 +1,40 @@
+https://github.com/   注册账号
+创建仓库
+上传文件
+
+git@github.com:yuanhangs/my1.git
+
+
+
+https://www.cnblogs.com/javabg/p/7987755.html
+
+
+use appinfodb;
+select * from app_category;
+
+-- 1)
+select categoryName from app_category
+where parentId  is null;
+
+-- 2)
+select a2.categoryName from app_category a1,app_category a2
+where a1.id=a2.parentId and a1.categoryName='全部应用';
+
+-- 3)
+select a2.categoryName from app_category a1,app_category a2
+where a1.id=a2.parentId and a1.categoryName='系统工具';
+
+
+select valueName from data_dictionary where typeCode='APP_FLATFORM';
+
+select valueName from data_dictionary where typeCode='APP_STATUS';
+
+
+一、理清数据库
+     开发者
+     dev_user
+     app_info
+    app_categroy
+    app_version
+     data_dictionary
+     后台：backend_user;
