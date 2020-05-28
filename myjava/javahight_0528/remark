@@ -1,0 +1,30 @@
+Java集合框架
+  1、Collection 接口存储一组不唯一，无序的对象
+      (1) boolean add(Object o)	在列表的末尾顺序添加元素，起始索引位置从0开始
+      (2) void add(int index,Object o)	在指定的索引位置添加元素。索引位置必须介于0和列表中元素个数之间
+      (3) int size()	返回列表中的元素个数
+      (4) Object get(int index)	返回指定索引位置处的元素。取出的元素是Object类型，使用前需要进行强制类型转换
+      (5)  boolean contains(Object o)	判断列表中是否存在指定元素
+      (6)  boolean remove(Object o)	从列表中删除元素
+      (7) Object remove(int index)	从列表中删除指定位置元素，起始索引位置从0开始
+
+   Collection接口常用通用方法还有：clear()、isEmpty()、iterator()、toArray()
+
+     1.1）、List 子接口存储一组不唯一，有序的对象
+          * 1)ArrayList子类:实现了长度可变的数组，在内存中分配连续的空间，遍历元素和随机访问元素的效率比较高
+
+            2)LinkedList子类：采用链表存储方式，插入、删除元素时效率比较高
+               自身的方法：(必须是子类应用对象！)
+                   addFirst（）
+                   addLast（）
+                   removeFirst（）
+                   removeLast（）
+                   getFirst（）
+                   getLast（）
+
+     1.2）、Set 子接口存储一组唯一，无序的对象
+           （1） HashSet类
+            (2)  TreeSet类
+            注意：没有get(int index)方法！！！
+
+  2、Map 接口存储一组键值对象，提供key到value的映射

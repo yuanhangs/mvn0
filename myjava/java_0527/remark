@@ -1,0 +1,49 @@
+
+一、异常:
+二、异常处理:
+三、Java的异常处理是通过5个关键字来实现的：try、catch、 finally、throw、throws
+
+(1) try...catch
+(2) try...catch...finally
+     注意：不执行finally块:    System.exit(1); //退出
+    try....finally一起使用，但没有意义！！
+(3) try...catch...catch.......finally
+    注意：先子类后父类
+
+（4）throws： 抛方法异常
+
+ (5) throw :对象异常
+   注意： throw与 throws 或 try..catch一起使用
+         方式1：调用者处理异常
+         方式2：调用者继续声明异常
+        main()方法声明的异常由Java虚拟机处理
+throw 与throws区别：
+    throw	                               throws
+    生成并抛出异常	                       声明方法内抛出了异常
+    位于方法体内部，可作为单独语句使用	  必须跟在方法参数列表后面，不能单独使用
+    抛出一个异常对象，且只能是一个	      声明抛出异常类型，可以跟多个异常
+
+
+四、异常类型：
+ Exception 	异常层次结构的父类
+子类：
+    ArithmeticException	算术错误情形，如以零作除数
+    ArrayIndexOutOfBoundsException	数组下标越界
+    NullPointerException	尝试访问 null 对象成员
+    ClassNotFoundException	不能加载所需的类
+    IllegalArgumentException	方法接收到非法参数
+    ClassCastException	对象强制类型转换出错
+    NumberFormatException	数字格式转换异常，如把"abc"转换成数字
+
+五、自定义异常
+   当JDK 中的异常类型不能满足程序的需要时，可以自定义异常类
+
+步骤：
+   1）写一个异常类： 继承Throwable类、继承Excepion 或者RuntimeException
+   2）编写构造方法
+   3）抛对象异常throw new 自定义异常； + throws 一起使用!
+
+总结：
+异常分为：Checked异常和运行时异常
+   （1） Checked异常：必须捕获或者声明抛出 （sql,io....）
+   （2）运行时： 异常不要求必须捕获或者声明抛出
